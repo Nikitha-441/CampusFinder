@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+body {
+  padding-top: 80px;
+}
+
 /* Transparent Navbar Styles */
 /* Navbar container */
 .transparent-header {
