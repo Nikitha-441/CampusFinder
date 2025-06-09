@@ -17,7 +17,6 @@ body{
       width: 100%;
       z-index: 1000;
       background: transparent;
-      backdrop-filter: blur(10px);
     }
 
     .nav-container {
@@ -33,7 +32,6 @@ body{
       font-size: 1.8rem;
       font-weight: bold;
       color: white;
-      margin-left: 1px;
     }
 
     .nav-links {
@@ -138,19 +136,20 @@ body{
     }
 
     /* Theme toggle button */
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      z-index: 10;
-      font-weight: bold;
-    }
+  .theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: var(--accent);  /* Needs to be defined */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  z-index: 10;
+  font-weight: bold;
+}
+
 
     /* Container styling */
     .container {
