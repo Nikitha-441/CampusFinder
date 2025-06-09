@@ -17,8 +17,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.3); /* Transparent background */
-  backdrop-filter: blur(8px);
+  background: transparent; /* Transparent background */
 }
 
 /* Inner container */
