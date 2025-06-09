@@ -7,87 +7,80 @@
     text-decoration: none;
 }
 
-body {
-  padding-top: 80px;
+body{
+    padding-top: 80px;
 }
 
-/* Transparent Navbar Styles */
-/* Navbar container */
 .transparent-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: transparent; /* Transparent background */
-}
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
 
-/* Inner container */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-/* Logo */
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: white;
-  margin-left: 2px;
-}
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
 
-/* Navigation Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
 
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-.nav-links li a:hover {
-  color: #ffcc00; /* Highlight color */
-}
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
 
-/* Menu toggle button */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    padding: 1rem;
-    gap: 1rem;
-  }
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+        gap: 1rem;
+      }
 
-  .nav-links.active {
-    display: flex;
-  }
+      .nav-links.active {
+        display: flex;
+      }
 
-  .menu-toggle {
-    display: block;
-  }
-}
-
+      .menu-toggle {
+        display: block;
+      }
+    }
 
 :root {
   --accent: #0066ff;
