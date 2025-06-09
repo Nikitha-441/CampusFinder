@@ -57,24 +57,7 @@
         .nav-links a:hover::after {
             width: 100%;
         }
-        .help-btn {
-            position: absolute;
-            right: 1.5rem;
-            top: 1rem;
-            background: var(--secondary-color);
-            border: none;
-            border-radius: 20px;
-            padding: 0.4rem 0.8rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: 0.3s ease;
-        }
 
-        .help-btn:hover {
-            background-color: #ff94ac;
-            transform: scale(1.1);
-        }
 
 /* Lisiting*/
 body {
