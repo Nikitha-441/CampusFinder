@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Lost & Found</title>
+  <link rel="stylesheet" href="about(stylesheet).css" />
+</head>
+<body>
+  
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header class="transparent-header">
+  <div class="nav-container">
+    <div class="logo">Lost & Found</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faqs.html">FAQ</a></li>
+      <li><a href="items.html">Items</a></li>
+      <li><a href="report.html">Report</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+
+  <div class="background-decor">
+    <canvas id="bubbles"></canvas>
+  </div>
+
+    <div class="container">
+    <h2>About Us</h2><br><br>
+
+    <p>
+      Welcome to the Lost and Found portal of <strong>Amrita Vishwa Vidyapeetham, Amritapuri Campus</strong>. This website is designed to help students, faculty, and staff report and search for lost or found items on campus.
+    </p><br>
+
+    <p>
+      Whether you've misplaced something important or found an item that belongs to someone else, this platform helps connect people and return items to their rightful owners.
+    </p>
+    <br>
+    <p>
+      👉 <strong>Lost something?</strong> Browse the listed items or report your lost item with details and contact info.<br />
+      👉 <strong>Found something?</strong> Post it here with a description and where you found it, so the owner can reach you.
+    </p><br>
+
+    <p>
+      This website was created as a student project to solve a real-world problem and make campus life more convenient and secure.
+    </p>
+    <br>
+    <p>
+      We're committed to helping the Amritapuri community stay honest, responsible, and connected. Every item returned brings someone peace of mind.
+    </p><br><br>
+
+    <div id="site-footer">
+      <footer>&copy; 2025 Lost & Found Project · Designed by students of Amrita Vishwa Vidyapeetham</footer>
+    </div>
+      
+
+  <script src="about(js).js">
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
+  }
+
+
+  </script>
+</body>
+</html>
