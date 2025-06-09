@@ -16,7 +16,7 @@ body{
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.3);
+      background: transparent;
       backdrop-filter: blur(10px);
     }
 
@@ -33,6 +33,7 @@ body{
       font-size: 1.8rem;
       font-weight: bold;
       color: white;
+      margin-left: 1px;
     }
 
     .nav-links {
