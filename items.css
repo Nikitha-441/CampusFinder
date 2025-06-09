@@ -70,9 +70,9 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 10px 0;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
   }
 
   .nav-links.show {
@@ -99,6 +99,10 @@
   transition: background 0.3s;
   border-radius: 6px;
 }
+
+.nav-links.active {
+    display: flex;
+  }
 
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.2);
