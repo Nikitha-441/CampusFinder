@@ -19,7 +19,6 @@ body {
   width: 100%;
   z-index: 1000;
   background: transparent; /* Transparent background */
-  backdrop-filter: blur(8px);
 }
 
 /* Inner container */
