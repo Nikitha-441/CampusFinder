@@ -1,4 +1,7 @@
-
+document.getElementById("menuToggle").addEventListener("click", function () {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+});
     // Theme toggle
     function toggleTheme() {
       document.body.classList.toggle('dark');
