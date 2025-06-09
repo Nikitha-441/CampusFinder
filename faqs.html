@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost & Found - Help Center</title>
+  <link rel="stylesheet" href="faqs.css"> 
+
+</head>
+
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <div class="background-decor">
+    <canvas id="bubbles"></canvas>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>How can we help?</h1>
+    </header>
+
+    <div class="contact-button">
+      <a href="mailto:kanishmakandasamy@gmail.com">Contact / Talk With Us</a>
+    </div>
+
+    <div class="category-cards">
+      <div class="card active" onclick="showFAQ('general', this)">
+        <h2>General</h2>
+        <p>Basic questions about lost & found services.</p>
+        <button>View FAQs</button>
+      </div>
+      <div class="card" onclick="showFAQ('account', this)">
+        <h2>Account</h2>
+        <p>Help with account management.</p>
+        <button>View FAQs</button>
+      </div>
+      <div class="card" onclick="showFAQ('pricing', this)">
+        <h2>Pricing</h2>
+        <p>Questions about any service charges.</p>
+        <button>View FAQs</button>
+      </div>
+    </div>
+
+    <!-- FAQ Sections -->
+    <div id="general" class="faq-section active">
+      <h2>General FAQs</h2>
+      <details><summary>What is Lost & Found?</summary><p>A platform to help return lost items.</p></details>
+      <details><summary>How does it work?</summary><p>Users report lost or found items and connect with others.</p></details>
+    </div>
+
+    <div id="account" class="faq-section">
+      <h2>Account FAQs</h2>
+      <details><summary>How do I reset my password?</summary><p>Click "Forgot Password" on the login page.</p></details>
+      <details><summary>Can I change my email?</summary><p>Yes, in account settings.</p></details>
+      <details><summary>Can I upload images?</summary><p>Yes, you can upload images of the lost/found items.</p></details>
+    </div>
+
+    <div id="pricing" class="faq-section">
+      <h2>Pricing FAQs</h2>
+      <details><summary>Is there a premium plan?</summary><p>No, all features are free.</p></details>
+      <details><summary>Any hidden charges?</summary><p>No hidden charges at all.</p></details>
+      <details><summary>Is it free to use?</summary><p>Yes, it's completely free.</p></details>
+    </div>
+  </div>
+  <script src="faqs.js"></script>
+
+  
+</body>
+</html>
