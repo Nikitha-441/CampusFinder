@@ -239,3 +239,23 @@ body {
         padding: 0.6rem 1.5rem;
     }
 }
+.feature-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.feature-links a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
