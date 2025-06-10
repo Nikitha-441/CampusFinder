@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body{
+    padding-top: 80px;
+}
+
+.transparent-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: transparent;
+    
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+:root {
+  --accent: #0066ff;
+  --text-light: #333;
+  --text-dark: #f1f1f1;
+  --bg-dark: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(270deg, #51708f, #82b9ce, #6e7b88);
+  background-size: 600% 600%;
+  animation: bgGradient 20s ease infinite;
+  color: var(--text-light);
+  overflow-x: hidden;
+  position: relative;
+}
+
+@keyframes bgGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: var(--accent);  /* Needs to be defined */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: 7rem auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 5;
+}
+
+body.dark .container {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.background-decor canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2); /* translucent white */
+  font-size: 0.9rem;
+  color: #fff;
+  backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
+  z-index: 5;
+}
+body.dark .site-footer {
+  background: rgba(0, 0, 0, 0.3);
+  color: #ccc;
+}
+

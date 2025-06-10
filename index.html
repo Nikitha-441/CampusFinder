@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Finder - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+    <div class="background-decor">
+        <canvas id="particles"></canvas>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">Campus Finder</div>
+        <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQ</a></li>
+            <li><a href="items.html">Items</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" data-aos="zoom-in">
+        <div class="hero-card">
+            <h1>Welcome to Campus Finder</h1>
+            <p class="typing" id="typing-text"></p>
+            <a href="items.html" class="cta-btn">Browse Lost & Found</a>
+        </div>
+    </section>
+
+    <section class="features" data-aos="fade-up">
+        <h2>Why Use Campus Finder?</h2>
+        <ul>
+            <li><i class="fas fa-search"></i> Quickly find or report lost items</li>
+            <li><i class="fas fa-shield-alt"></i> Safe, trusted, student-focused platform</li>
+            <li><i class="fas fa-mobile-alt"></i> Easy to use</li>
+        </ul>
+        <div class="feature-links">
+            <a href="piv.html">Privacy Policy</a>
+            <a href="tac.html">Terms & Conditions</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Campus Finder. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- AOS library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script src="home.js"></script>
+</body>
+
+</html>
