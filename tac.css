@@ -1,0 +1,177 @@
+:root {
+  --primary-color: #f5faff;
+  --accent: #2575fc;
+  --accent2: #6a11cb;
+  --card-bg: #fff;
+  --card-shadow: 0 8px 32px 0 #b3c6ff44;
+  --step-bg: #f0f6ff;
+  --step-icon-bg: #e3eaff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f5faff 100%);
+  color: #232946;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #554971;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent2);
+}
+
+.tac-main {
+  max-width: 420px;
+  margin: 48px auto 0 auto;
+  background: var(--card-bg);
+  border-radius: 32px;
+  box-shadow: var(--card-shadow);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+}
+
+.tac-header {
+  margin-bottom: 2.5rem;
+}
+h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent2);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.tac-subtitle {
+  color: #6a7ca3;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tac-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tac-step {
+  display: flex;
+  align-items: flex-start;
+  background: var(--step-bg);
+  border-radius: 18px;
+  padding: 1.1rem 1rem;
+  box-shadow: 0 2px 8px #b3c6ff22;
+  margin-bottom: 0.5rem;
+  gap: 1.1rem;
+}
+
+.tac-step-icon {
+  background: var(--step-icon-bg);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--accent2);
+  box-shadow: 0 2px 8px #b3c6ff22;
+  flex-shrink: 0;
+}
+
+.tac-step-title {
+  font-size: 0.9rem;
+  color: #6a7ca3;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  letter-spacing: 1px;
+}
+
+.tac-step-desc {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent2);
+  margin-bottom: 0.2rem;
+}
+
+.tac-step-text {
+  font-size: 1rem;
+  color: #232946;
+  text-align: left;
+}
+
+.tac-footer {
+  margin-top: 2.5rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px #b3c6ff33;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scale(1.07);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  background: #f8f8f8;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 60px;
+  border-top: none;
+  box-shadow: 0 -4px 32px #51708f22;
+  letter-spacing: 1px;
+  border-radius: 0 0 18px 18px;
+}
+
+@media (max-width: 600px) {
+  .tac-main {
+    padding: 16px 4px 16px 4px;
+    border-radius: 18px;
+  }
+  .tac-hero-img {
+    width: 70px;
+  }
+}
