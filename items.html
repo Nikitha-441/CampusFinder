@@ -12,26 +12,35 @@
 </head>
 <body>
     <!-- Navigation bar-->
-    <header class="transparent-header">
+  <header class="transparent-header">
   <nav class="nav-container">
     <div class="logo">Campus Finder</div>
     <div class="menu-toggle" id="menuToggle">&#9776;</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="faqs.html">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
       <li><a href="items.html">Items</a></li>
       <li><a href="report.html">Report</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-    <!-- Listing -->
   <div class="container">
     <h1><i class="fa-solid fa-magnifying-glass-location"></i> Lost & Found Listings</h1>
 
     <div class="filters">
       <input type="text" id="searchInput" placeholder="🔍 Search items...">
+
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Books & Stationery	">Books & Stationery</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Bags & Valuables">Bags & Valuables</option>
+        <option value="Keys & Cards">Keys & Cards</option>
+        <option value="Miscellaneous	">Miscellaneous	</option>
+      </select>
 
       <div class="toggle-status">
         <button data-status="All" class="active">All</button>
