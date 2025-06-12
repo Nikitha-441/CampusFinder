@@ -1,10 +1,3 @@
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
 const items = [
   {
     id: "wallet",
@@ -63,10 +56,11 @@ const items = [
   }
 ];
 const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-menuToggle.onclick = function() {
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.onclick = function() {
     navLinks.classList.toggle('show');
   };
+
 function showItems(filteredItems = items) {
   const grid = document.getElementById("itemsGrid");
   grid.innerHTML = "";
@@ -132,3 +126,5 @@ categoryFilter.onchange = function () {
 };
 // Initial Load
 showItems();
+
+  
