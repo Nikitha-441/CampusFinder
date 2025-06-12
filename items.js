@@ -61,7 +61,28 @@ const menuToggle = document.getElementById('menuToggle');
     navLinks.classList.toggle('show');
   };
 
-function showItems(filteredItems = items) {
+function getAllItems() {
+  // Get items from localStorage
+  const localItems = JSON.parse(localStorage.getItem("submittedReports"));
+  let reportedItems = [];
+  if (Array.isArray(localItems) && localItems.length > 0) {
+    reportedItems = localItems.map((item, idx) => ({
+      id: item.itemName ? item.itemName.toLowerCase().replace(/\s+/g, '-') + '-' + idx : 'item-' + idx,
+      name: item.itemName || item.name || 'Unknown',
+      category: item.category || 'Miscellaneous',
+      date: item.date || '',
+      location: item.location || '',
+      status: item.status || 'Lost',
+      image: item.image && item.image.startsWith('data:') ? item.image : 'images/default.jpg',
+      description: item.description || '',
+      contact: item.contact || '',
+    }));
+  }
+  // Combine default items and reported items
+  return items.concat(reportedItems);
+}
+
+function showItems(filteredItems) {
   const grid = document.getElementById("itemsGrid");
   grid.innerHTML = "";
 
@@ -78,21 +99,24 @@ function showItems(filteredItems = items) {
         <p><i class="fa-solid fa-layer-group"></i> ${item.category}</p>
         <p><i class="fa-solid fa-envelope"></i> ${item.contact}</p>
         <p>${item.description}</p>
-        <span class="tag ${item.status.toLowerCase()}">${item.status}</span>
+        <span class="tag ${item.status ? item.status.toLowerCase() : ''}">${item.status}</span>
       </div>
     `;
     grid.appendChild(div);
   });
 }
+
 function filterByStatus(status) {
-  const filtered = (status === "All") ? items : items.filter(item => item.status === status);
+  const allItems = getAllItems();
+  const filtered = (status === "All") ? allItems : allItems.filter(item => item.status === status);
   showItems(filtered);
 }
 
 const searchInput = document.getElementById("searchInput");
 searchInput.oninput = function () {
   const keyword = searchInput.value.toLowerCase();
-  const filtered = items.filter(item =>
+  const allItems = getAllItems();
+  const filtered = allItems.filter(item =>
     (item.name + item.description + item.location + item.category)
       .toLowerCase()
       .includes(keyword)
@@ -112,19 +136,20 @@ document.querySelectorAll(".toggle-status button").forEach(btn => {
 const categoryFilter = document.getElementById("categoryFilter");
 categoryFilter.onchange = function () {
   const selectedCategory = categoryFilter.value.trim();
-  let filtered = items;
+  let allItems = getAllItems();
   if (selectedCategory) {
-    filtered = filtered.filter(item => item.category.trim() === selectedCategory);
+    allItems = allItems.filter(item => item.category.trim() === selectedCategory);
   }
   // Also filter by status if a toggle is active
   const activeStatusBtn = document.querySelector(".toggle-status button.active");
   const status = activeStatusBtn ? activeStatusBtn.dataset.status : "All";
   if (status !== "All") {
-    filtered = filtered.filter(item => item.status === status);
+    allItems = allItems.filter(item => item.status === status);
   }
-  showItems(filtered);
+  showItems(allItems);
 };
+
 // Initial Load
-showItems();
+showItems(getAllItems());
 
   
