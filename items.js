@@ -62,6 +62,11 @@ const items = [
     contact: "founder@campus.com"
   }
 ];
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.onclick = function() {
+    navLinks.classList.toggle('show');
+  };
 function showItems(filteredItems = items) {
   const grid = document.getElementById("itemsGrid");
   grid.innerHTML = "";
